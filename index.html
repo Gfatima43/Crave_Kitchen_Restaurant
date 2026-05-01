@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       Crave Kitchen | Restaurant Landing Page
+       Author  : Senior Full-Stack Developer
+       Version : 1.0.0
+       Stack   : HTML5 · CSS3 · Bootstrap 5 · jQuery · PHP/MySQL
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Crave Kitchen – where every bite tells a story. Modern dining experience in the heart of the city." />
+  <title>Crave Kitchen | Fine Casual Dining</title>
+
+  <!-- ── Google Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,500&display=swap"
+    rel="stylesheet" />
+
+  <!-- ── Bootstrap 5 CSS ── -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- ── Bootstrap Icons ── -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <!-- ── Custom Styles ── -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
+
+  <!-- ============================================================
+       PRELOADER
+  ============================================================ -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <span class="preloader-logo"><img src="images/Logo.png?w=500&q=80" alt="Crave Kitchen - Logo"></span>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="#hero">
+        <span><img class="brand-mark" src="images/Logo.png?w=800&q=50" alt="Crave Kitchen - Logo"></span>
+        <span class="brand-name">Crave <em>Kitchen</em></span>
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-line"></span>
+        <span class="toggler-line"></span>
+        <span class="toggler-line"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link btn-reserve" href="#reservation">Reserve a Table</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section id="hero" class="hero-section">
+
+    <!-- Ambient background layers -->
+    <div class="hero-bg-layer hero-bg-img"></div>
+    <div class="hero-bg-layer hero-overlay"></div>
+    <div class="hero-grain"></div>
+
+    <!-- Floating decorative words -->
+    <div class="hero-ambient-text left">TASTE</div>
+    <div class="hero-ambient-text right">CRAFT</div>
+
+    <div class="container h-100 position-relative z-1">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-8 col-xl-7">
+
+          <!-- Tag line -->
+          <p class="hero-tagline reveal-up" data-delay="0">
+            <span class="tagline-dash"></span> Fine Casual Dining
+          </p>
+
+          <!-- Headline -->
+          <h1 class="hero-headline reveal-up" data-delay="100">
+            Where Every<br />
+            <em>Bite Tells</em><br />
+            a Story.
+          </h1>
+
+          <!-- Sub copy -->
+          <p class="hero-sub reveal-up" data-delay="200">
+            Handcrafted dishes, seasonal ingredients, and an atmosphere
+            that makes you forget the world outside.
+          </p>
+
+          <!-- CTAs -->
+          <div class="hero-ctas reveal-up" data-delay="300">
+            <a href="#reservation" class="btn btn-primary-crave">
+              Book a Table <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+            <a href="#menu" class="btn btn-outline-crave">
+              Explore Menu
+            </a>
+          </div>
+
+          <!-- Quick stats -->
+          <div class="hero-stats reveal-up" data-delay="400">
+            <div class="stat-item">
+              <span class="stat-num">12+</span>
+              <span class="stat-lbl">Years of Taste</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">80+</span>
+              <span class="stat-lbl">Dishes on Menu</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">4.9★</span>
+              <span class="stat-lbl">Guest Rating</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section id="about" class="about-section section-pad">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+
+        <!-- Image block -->
+        <div class="col-lg-6 order-lg-2">
+          <div class="about-img-wrap reveal-right">
+            <img src="images/photo-1414235077428-338989a2e8c0.jfif?w=800&q=80" alt="Crave Kitchen Interior"
+              class="about-img-main" loading="lazy" />
+            <div class="about-img-badge">
+              <span class="badge-year">Est.</span>
+              <span class="badge-num">2013</span>
+            </div>
+            <div class="about-img-card reveal-card">
+              <i class="bi bi-award-fill"></i>
+              <div>
+                <strong>Award Winning</strong>
+                <p>Best Restaurant 2023 – City Food Awards</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text block -->
+        <div class="col-lg-6 order-lg-1">
+          <div class="reveal-left">
+            <p class="section-eyebrow"><span></span> Our Story</p>
+            <h2 class="section-heading">Passion on Every<br /><em>Plate We Serve</em></h2>
+            <p class="section-body">
+              Crave Kitchen was born from a simple belief — that great food is an act of love.
+              Since 2013, our chefs have been sourcing the finest seasonal produce to craft dishes
+              that comfort, surprise, and delight in equal measure.
+            </p>
+            <p class="section-body">
+              Step through our doors and into an atmosphere carefully designed for conversation,
+              celebration, and quiet indulgence. Whether a date night or a family gathering,
+              every table is given the same obsessive attention.
+            </p>
+
+            <!-- Feature list -->
+            <ul class="about-features">
+              <li><i class="bi bi-check-circle-fill"></i> Farm-to-table seasonal ingredients</li>
+              <li><i class="bi bi-check-circle-fill"></i> Curated wine & cocktail pairings</li>
+              <li><i class="bi bi-check-circle-fill"></i> Private dining rooms available</li>
+              <li><i class="bi bi-check-circle-fill"></i> Vegan &amp; gluten-free options</li>
+            </ul>
+
+            <a href="#reservation" class="btn btn-primary-crave mt-2">
+              Reserve Your Table <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MENU / SERVICES SECTION
+  ============================================================ -->
+  <section id="menu" class="menu-section section-pad">
+    <div class="menu-bg-pattern"></div>
+    <div class="container position-relative">
+
+      <!-- Section Header -->
+      <div class="section-header text-center reveal-up">
+        <p class="section-eyebrow justify-content-center"><span></span> Our Offerings <span></span></p>
+        <h2 class="section-heading">Crafted for Every<br /><em>Craving</em></h2>
+        <p class="section-sub">
+          From morning brunch to late-night desserts — our menu spans moods,
+          seasons, and palates.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="menu-tabs reveal-up">
+        <button class="menu-tab active" data-filter="all">All</button>
+        <button class="menu-tab" data-filter="starters">Starters</button>
+        <button class="menu-tab" data-filter="mains">Mains</button>
+        <button class="menu-tab" data-filter="desserts">Desserts</button>
+        <button class="menu-tab" data-filter="drinks">Drinks</button>
+      </div>
+
+      <!-- Menu Cards Grid -->
+      <div class="row g-4 menu-grid" id="menuGrid">
+
+        <!-- Card: Starters -->
+        <div class="col-sm-6 col-lg-3 menu-item" data-category="starters">
+          <div class="menu-card reveal-up" data-delay="0">
+            <div class="menu-card-img">
+              <img src="images/photo-1572695157366-5e585ab2b69f.jfif?w=400&q=80" alt="Bruschetta al Pomodoro"
+                loading="lazy" />
+              <span class="menu-badge">Popular</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-category">Starter</span>
+              <h5 class="menu-name">Bruschetta al Pomodoro</h5>
+              <p class="menu-desc">Toasted sourdough, heirloom tomatoes, fresh basil &amp; aged balsamic.</p>
+              <div class="menu-footer">
+                <span class="menu-price">$12</span>
+                <button class="btn-add-fav" aria-label="Add to favourites">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 menu-item" data-category="starters">
+          <div class="menu-card reveal-up" data-delay="100">
+            <div class="menu-card-img">
+              <img src="images/photo-1547592166-23ac45744acd.jfif?w=400&q=80" alt="Burrata Salad" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-category">Starter</span>
+              <h5 class="menu-name">Creamy Burrata Salad</h5>
+              <p class="menu-desc">Fresh burrata, peach slices, candied walnuts, honey drizzle.</p>
+              <div class="menu-footer">
+                <span class="menu-price">$16</span>
+                <button class="btn-add-fav" aria-label="Add to favourites">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Mains -->
+        <div class="col-sm-6 col-lg-3 menu-item" data-category="mains">
+          <div class="menu-card reveal-up" data-delay="0">
+            <div class="menu-card-img">
+              <img src="images/photo-1544025162-d76694265947.jfif?w=400&q=80" alt="Grilled Salmon" loading="lazy" />
+              <span class="menu-badge chef">Chef's Pick</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-category">Main</span>
+              <h5 class="menu-name">Atlantic Grilled Salmon</h5>
+              <p class="menu-desc">Pan-seared salmon fillet, lemon butter sauce, seasonal greens.</p>
+              <div class="menu-footer">
+                <span class="menu-price">$32</span>
+                <button class="btn-add-fav" aria-label="Add to favourites">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 menu-item" data-category="mains">
+          <div class="menu-card reveal-up" data-delay="100">
+            <div class="menu-card-img">
+              <img src="images/photo-1504674900247-0877df9cc836.jfif?w=400&q=80" alt="Truffle Risotto" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-category">Main</span>
+              <h5 class="menu-name">Black Truffle Risotto</h5>
+              <p class="menu-desc">Arborio rice, black truffle, parmesan crust, wild mushrooms.</p>
+              <div class="menu-footer">
+                <span class="menu-price">$28</span>
+                <button class="btn-add-fav" aria-label="Add to favourites">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Desserts -->
+        <div class="col-sm-6 col-lg-3 menu-item" data-category="desserts">
+          <div class="menu-card reveal-up" data-delay="200">
+            <div class="menu-card-img">
+              <img src="images/photo-1563729784474-d77dbb933a9e.jfif?w=400&q=80" alt="Crème Brûlée" loading="lazy" />
+              <span class="menu-badge">Popular</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-category">Dessert</span>
+              <h5 class="menu-name">Classic Crème Brûlée</h5>
+              <p class="menu-desc">Vanilla custard, caramelised sugar crust, fresh berry coulis.</p>
+              <div class="menu-footer">
+                <span class="menu-price">$14</span>
+                <button class="btn-add-fav" aria-label="Add to favourites">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 menu-item" data-category="desserts">
+          <div class="menu-card reveal-up" data-delay="300">
+            <div class="menu-card-img">
+              <img src="images/photo-1551024506-0bccd828d307.jfif?w=400&q=80" alt="Lava Cake" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-category">Dessert</span>
+              <h5 class="menu-name">Molten Lava Cake</h5>
+              <p class="menu-desc">Warm dark chocolate heart, vanilla bean ice cream, hazelnut dust.</p>
+              <div class="menu-footer">
+                <span class="menu-price">$15</span>
+                <button class="btn-add-fav" aria-label="Add to favourites">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Drinks -->
+        <div class="col-sm-6 col-lg-3 menu-item" data-category="drinks">
+          <div class="menu-card reveal-up" data-delay="0">
+            <div class="menu-card-img">
+              <img src="images/photo-1551538827-9c037cb4f32a.jfif?w=400&q=80" alt="Signature Cocktail" loading="lazy" />
+              <span class="menu-badge chef">Signature</span>
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-category">Drink</span>
+              <h5 class="menu-name">Golden Hour Spritz</h5>
+              <p class="menu-desc">Aperol, prosecco, blood orange, rosemary sprig, smoked salt rim.</p>
+              <div class="menu-footer">
+                <span class="menu-price">$18</span>
+                <button class="btn-add-fav" aria-label="Add to favourites">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3 menu-item" data-category="drinks">
+          <div class="menu-card reveal-up" data-delay="100">
+            <div class="menu-card-img">
+              <img src="images/photo-1561047029-3000c68339ca.jfif?w=400&q=80" alt="Wine Pairing" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <span class="menu-category">Drink</span>
+              <h5 class="menu-name">Curated Wine Pairing</h5>
+              <p class="menu-desc">Sommelier-selected wine flights to match your chosen course.</p>
+              <div class="menu-footer">
+                <span class="menu-price">$24</span>
+                <button class="btn-add-fav" aria-label="Add to favourites">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.menu-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE / HIGHLIGHT BANNER
+  ============================================================ -->
+  <section class="experience-banner section-pad">
+    <div class="exp-bg-img"></div>
+    <div class="exp-overlay"></div>
+    <div class="container position-relative z-1 text-center">
+      <p class="section-eyebrow justify-content-center" style="color:#E8D9C4;opacity:.7;">
+        <span style="background:#E8D9C4;"></span> The Experience <span style="background:#E8D9C4;"></span>
+      </p>
+      <h2 class="section-heading text-white reveal-up">
+        More Than a Meal —<br /><em>A Memory.</em>
+      </h2>
+      <p class="section-sub text-white reveal-up" style="opacity:.8;max-width:540px;margin:0 auto 2.5rem;">
+        Live music every Friday, chef's tasting menu on Saturdays, and brunch
+        every Sunday morning. Join us for an experience you won't forget.
+      </p>
+      <div class="reveal-up d-flex flex-wrap gap-3 justify-content-center">
+        <a href="#reservation" class="btn btn-primary-crave">Make a Reservation</a>
+        <a href="#gallery" class="btn btn-outline-light-crave">View Gallery</a>
+      </div>
+
+      <!-- Three pillars -->
+      <div class="exp-pillars reveal-up">
+        <div class="pillar">
+          <i class="bi bi-music-note-beamed"></i>
+          <span>Live Music Fridays</span>
+        </div>
+        <div class="pillar">
+          <i class="bi bi-egg-fried"></i>
+          <span>Weekend Brunch</span>
+        </div>
+        <div class="pillar">
+          <i class="bi bi-stars"></i>
+          <span>Tasting Menu</span>
+        </div>
+        <div class="pillar">
+          <i class="bi bi-gift"></i>
+          <span>Private Events</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALLERY SECTION
+  ============================================================ -->
+  <section id="gallery" class="gallery-section section-pad">
+    <div class="container">
+      <div class="section-header text-center reveal-up">
+        <p class="section-eyebrow justify-content-center">
+          <span></span> Visual Feast <span></span>
+        </p>
+        <h2 class="section-heading">Moments at<br /><em>Crave Kitchen</em></h2>
+      </div>
+
+      <!-- Masonry-style grid -->
+      <div class="gallery-grid reveal-up">
+
+        <div class="g-item g-item--tall">
+          <img src="images/photo-1414235077428-338989a2e8c0.jfif?w=600&q=80" alt="Restaurant Ambience" loading="lazy" />
+          <div class="g-overlay"><span>Ambience</span></div>
+        </div>
+
+        <div class="g-item">
+          <img src="images/photo-1546069901-ba9599a7e63c.jfif?w=600&q=80" alt="Healthy Bowl" loading="lazy" />
+          <div class="g-overlay"><span>Healthy Bowl</span></div>
+        </div>
+
+        <div class="g-item">
+          <img src="images/photo-1473093295043-cdd812d0e601.jfif?w=600&q=80" alt="Pasta Dish" loading="lazy" />
+          <div class="g-overlay"><span>Pasta</span></div>
+        </div>
+
+        <div class="g-item g-item--wide">
+          <img src="images/photo-1517248135467-4c7edcad34c4.jfif?w=800&q=80" alt="Dining Room" loading="lazy" />
+          <div class="g-overlay"><span>Dining Room</span></div>
+        </div>
+
+        <div class="g-item">
+          <img src="images/photo-1565299624946-b28f40a0ae38.jfif?w=600&q=80" alt="Pizza" loading="lazy" />
+          <div class="g-overlay"><span>Pizza</span></div>
+        </div>
+
+        <div class="g-item">
+          <img src="images/photo-1567620905732-2d1ec7ab7445.jfif?w=600&q=80" alt="Pancakes" loading="lazy" />
+          <div class="g-overlay"><span>Brunch Plate</span></div>
+        </div>
+
+        <div class="g-item g-item--tall">
+          <img src="images/photo-1540189549336-e6e99c3679fe.jfif?w=600&q=80" alt="Salad" loading="lazy" />
+          <div class="g-overlay"><span>Garden Salad</span></div>
+        </div>
+
+        <div class="g-item">
+          <img src="images/photo-1555939594-58d7cb561ad1.jfif?w=600&q=80" alt="Burger" loading="lazy" />
+          <div class="g-overlay"><span>Artisan Burger</span></div>
+        </div>
+
+      </div><!-- /.gallery-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS (BONUS)
+  ============================================================ -->
+  <section class="testimonials-section section-pad">
+    <div class="container">
+      <div class="section-header text-center reveal-up">
+        <p class="section-eyebrow justify-content-center"><span></span> Guests Say <span></span></p>
+        <h2 class="section-heading">Straight from<br /><em>Our Tables</em></h2>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-4 reveal-up" data-delay="0">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"The truffle risotto was an absolute dream. The ambience, the service — every detail
+              was perfect. We'll be back every anniversary."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">S</div>
+              <div>
+                <strong>Sarah M.</strong>
+                <span>Food Blogger</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal-up" data-delay="100">
+          <div class="testi-card testi-card--featured">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"Best dining experience in the city — no contest. The chef's tasting menu took us on a
+              journey through every possible flavour."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">J</div>
+              <div>
+                <strong>James T.</strong>
+                <span>Restaurant Critic</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal-up" data-delay="200">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"My family's go-to for celebrations. The staff remembers our names, our favourites. It
+              genuinely feels like home — a very delicious home."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">A</div>
+              <div>
+                <strong>Amira K.</strong>
+                <span>Loyal Guest</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RESERVATION / CONTACT SECTION
+  ============================================================ -->
+  <section id="reservation" class="reservation-section section-pad">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+
+        <!-- Left info column -->
+        <div class="col-lg-5 reveal-left">
+          <p class="section-eyebrow"><span></span> Book Your Table</p>
+          <h2 class="section-heading">Make a<br /><em>Reservation</em></h2>
+          <p class="section-body">
+            Join us for an unforgettable dining experience. Fill in the form and
+            our team will confirm your reservation within 24 hours.
+          </p>
+
+          <div class="contact-info-list">
+            <div class="ci-item">
+              <div class="ci-icon"><i class="bi bi-geo-alt-fill"></i></div>
+              <div>
+                <strong>Find Us</strong>
+                <p>42 Flavour Street, Gourmet Quarter,<br />New York, NY 10001</p>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><i class="bi bi-clock-fill"></i></div>
+              <div>
+                <strong>Opening Hours</strong>
+                <p>Mon – Thu: 12pm – 10pm<br />Fri – Sun: 11am – 11pm</p>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><i class="bi bi-telephone-fill"></i></div>
+              <div>
+                <strong>Call Us</strong>
+                <p>+1 (212) 555-0172</p>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon"><i class="bi bi-envelope-fill"></i></div>
+              <div>
+                <strong>Email</strong>
+                <p>hello@cravekitchen.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right form column -->
+        <div id="contact" class="col-lg-7 reveal-right">
+          <div class="reservation-form-card">
+
+            <!-- Success / Error messages -->
+            <div id="formSuccess" class="form-alert form-alert--success d-none">
+              <i class="bi bi-check-circle-fill"></i>
+              <span>Thank you! Your reservation request has been received. We'll confirm within 24 hours.</span>
+            </div>
+            <div id="formError" class="form-alert form-alert--error d-none">
+              <i class="bi bi-x-circle-fill"></i>
+              <span id="formErrorMsg">Something went wrong. Please try again.</span>
+            </div>
+
+            <!-- The Form -->
+            <form id="reservationForm" novalidate>
+              <div class="row g-3">
+
+                <div class="col-sm-6">
+                  <label for="fname" class="form-label">First Name <span>*</span></label>
+                  <input type="text" id="fname" name="fname" class="form-control crave-input" placeholder="John"
+                    required />
+                  <div class="invalid-msg">Please enter your first name.</div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="lname" class="form-label">Last Name <span>*</span></label>
+                  <input type="text" id="lname" name="lname" class="form-control crave-input" placeholder="Doe"
+                    required />
+                  <div class="invalid-msg">Please enter your last name.</div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="email" class="form-label">Email Address <span>*</span></label>
+                  <input type="email" id="email" name="email" class="form-control crave-input"
+                    placeholder="john@example.com" required />
+                  <div class="invalid-msg">Please enter a valid email.</div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-control crave-input"
+                    placeholder="+1 (212) 000-0000" />
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="res_date" class="form-label">Date <span>*</span></label>
+                  <input type="date" id="res_date" name="res_date" class="form-control crave-input" required />
+                  <div class="invalid-msg">Please select a date.</div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="res_time" class="form-label">Time <span>*</span></label>
+                  <select id="res_time" name="res_time" class="form-select crave-input" required>
+                    <option value="" disabled selected>Select time</option>
+                    <option>12:00 PM</option>
+                    <option>12:30 PM</option>
+                    <option>01:00 PM</option>
+                    <option>01:30 PM</option>
+                    <option>07:00 PM</option>
+                    <option>07:30 PM</option>
+                    <option>08:00 PM</option>
+                    <option>08:30 PM</option>
+                    <option>09:00 PM</option>
+                  </select>
+                  <div class="invalid-msg">Please select a time.</div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="guests" class="form-label">Guests <span>*</span></label>
+                  <select id="guests" name="guests" class="form-select crave-input" required>
+                    <option value="" disabled selected>Number of guests</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 – 8</option>
+                    <option>9+</option>
+                  </select>
+                  <div class="invalid-msg">Please select guest count.</div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="occasion" class="form-label">Occasion</label>
+                  <select id="occasion" name="occasion" class="form-select crave-input">
+                    <option value="">None / General</option>
+                    <option>Birthday</option>
+                    <option>Anniversary</option>
+                    <option>Business Dinner</option>
+                    <option>Date Night</option>
+                    <option>Family Gathering</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="message" class="form-label">Special Requests</label>
+                  <textarea id="message" name="message" class="form-control crave-input" rows="4"
+                    placeholder="Dietary requirements, seating preferences, etc."></textarea>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary-crave w-100" id="submitBtn">
+                    <span class="btn-text">Confirm Reservation</span>
+                    <span class="btn-loader d-none">
+                      <i class="bi bi-arrow-repeat spin"></i> Sending…
+                    </span>
+                  </button>
+                </div>
+
+              </div><!-- /.row -->
+            </form>
+          </div>
+        </div>
+
+      </div><!-- /.row -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row g-5">
+
+          <!-- Brand column -->
+          <div class="col-lg-4">
+            <a class="navbar-brand mb-3 d-inline-flex" href="#hero">
+              <span><img class="brand-mark footer-brand-logo" src="images/Logo.png" alt="Crave Kitchen Logo" /></span>
+              <span class="brand-name" style="color:#E8D9C4;">Crave <em>Kitchen</em></span>
+            </a>
+            <p class="footer-desc">
+              Fine casual dining crafted with love, served with soul. Your next
+              favourite restaurant is waiting.
+            </p>
+            <!-- Social Links -->
+            <div class="footer-socials">
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-6 col-lg-2">
+            <h6 class="footer-heading">Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#menu">Our Menu</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#reservation">Reservations</a></li>
+            </ul>
+          </div>
+
+          <!-- Explore -->
+          <div class="col-6 col-lg-2">
+            <h6 class="footer-heading">Explore</h6>
+            <ul class="footer-links">
+              <li><a href="#">Tasting Menu</a></li>
+              <li><a href="#">Private Dining</a></li>
+              <li><a href="#">Gift Cards</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-4">
+            <h6 class="footer-heading">Visit Us</h6>
+            <ul class="footer-contact-list">
+              <li>
+                <i class="bi bi-geo-alt-fill"></i>
+                42 Flavour Street, Gourmet Quarter, New York, NY 10001
+              </li>
+              <li>
+                <i class="bi bi-telephone-fill"></i>
+                +1 (212) 555-0172
+              </li>
+              <li>
+                <i class="bi bi-envelope-fill"></i>
+                hello@cravekitchen.com
+              </li>
+              <li>
+                <i class="bi bi-clock-fill"></i>
+                Mon–Thu 12pm–10pm · Fri–Sun 11am–11pm
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <p class="mb-0">© 2025 <strong>Crave Kitchen</strong>. All rights reserved.</p>
+        <p class="mb-0">
+          <a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-Top Button -->
+  <button id="scrollTop" aria-label="Scroll to top" title="Back to top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- ── jQuery ── -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- ── Bootstrap 5 JS ── -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ── Custom Script ── -->
+  <script src="script.js"></script>
+</body>
+
+</html>
